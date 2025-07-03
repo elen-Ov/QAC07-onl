@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[10] { 3, 7, -4, 2, 8, 1, 5, 6, 9, -10 };
+            int[] numbers = { 3, 7, -4, 2, 8, 1, 5, 6, 9, -10 };
 
             int sumEven = 0, quantityUneven = 0;
 
