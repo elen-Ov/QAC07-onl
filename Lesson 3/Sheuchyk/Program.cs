@@ -1,30 +1,56 @@
 ﻿using System;
 
-class Program
+namespace Lesson3
 {
-    static void Main()
+    internal class Program
     {
-        // Task #1
-        Console.Write("Enter the deposit amount: ");
-        decimal deposit = decimal.Parse(Console.ReadLine());
+        static void Main(string[] args)
+        {
+            // Task 1: Deposit growth 
 
-     
-        decimal rate = 0.10m;
+            Console.Write("Enter the deposit amount: ");
+            decimal deposit = decimal.Parse(Console.ReadLine());
 
-        // After 1 year
-        deposit = deposit + (deposit * rate);
-        Console.WriteLine("Amount after year 1: " + deposit);
+            decimal rate = 0.10m;
 
-        // After 2 years
-        deposit = deposit + (deposit * rate);
-        Console.WriteLine("Amount after year 2: " + deposit);
+            deposit += deposit * rate;
+            Console.WriteLine("Amount after year 1: " + deposit);
 
-        // After 3 years
-        deposit = deposit + (deposit * rate);
-        Console.WriteLine("Amount after year 3: " + deposit);
+            deposit += deposit * rate;
+            Console.WriteLine("Amount after year 2: " + deposit);
 
-      
-        Console.WriteLine("Press any key to exit...");
-    
+            deposit += deposit * rate;
+            Console.WriteLine("Amount after year 3: " + deposit);
+
+            Console.WriteLine(); 
+
+
+
+
+
+            //Task 2: Even and odd in array 
+
+            int[] numbers = { 3, 7, 4, 2, 8, 1, 5, 6, 9, 10 };
+
+            int evenSum = 0;
+            int oddCount = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    evenSum += numbers[i];
+                }
+                else
+                {
+                    oddCount++;
+                }
+            }
+
+            Console.WriteLine("Sum of even numbers: " + evenSum);
+            Console.WriteLine("Count of odd numbers: " + oddCount);
+
+         
+        }
     }
 }
