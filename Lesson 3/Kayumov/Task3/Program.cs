@@ -36,7 +36,7 @@
                 Console.WriteLine("Удовлетворительно");
             }
 
-            else if (60 > averageRating)
+            else if (averageRating < 60)
             {
                 Console.WriteLine("Неудовлетворительно");
             }
